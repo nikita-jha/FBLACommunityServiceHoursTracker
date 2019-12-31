@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="839.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondWindowController">
+   <children>
+      <HBox layoutY="285.0" prefHeight="324.0" prefWidth="839.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="324.0" prefWidth="839.0">
+               <columns>
+                  <TableColumn fx:id="studentNumberColumn" prefWidth="162.99996948242188" text="Number" />
+                  <TableColumn fx:id="firstNameColumn" onEditCommit="#changeFirstNameCellEvent" prefWidth="112.0" text="Name" />
+                  <TableColumn fx:id="gradesColumn" onEditCommit="#changeGradeCellEvent" prefWidth="90.0" text="Grade" />
+                  <TableColumn fx:id="hoursDateColumn" prefWidth="124.0" text="Last Date" />
+                  <TableColumn fx:id="hoursColumn" minWidth="0.0" onEditCommit="#changeHoursCellEvent" prefWidth="157.0" text="Total Hours" />
+                  <TableColumn fx:id="serviceAwardColumn" onEditCommit="#changeServiceAwardCellEvent" prefWidth="192.0" text="Service Award" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <MenuBar prefHeight="39.0" prefWidth="839.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <HBox layoutX="24.0" layoutY="65.0" prefHeight="101.0" prefWidth="839.0">
+         <children>
+            <Label text="Number">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin></Label>
+            <VBox prefHeight="101.0" prefWidth="16.0" />
+            <TextField fx:id="studentNumberTextField" prefHeight="39.0" prefWidth="175.0" promptText="Student Number" />
+            <VBox prefHeight="101.0" prefWidth="45.0" />
+            <Label text="Name">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin></Label>
+            <VBox prefHeight="101.0" prefWidth="19.0" />
+            <TextField fx:id="firstNameTextField" prefHeight="39.0" prefWidth="178.0" promptText="Student Name" />
+            <VBox prefHeight="101.0" prefWidth="42.0" />
+            <Label text="Grade">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin></Label>
+            <VBox prefHeight="101.0" prefWidth="14.0" />
+            <ChoiceBox fx:id="gradesChoiceBox" prefHeight="39.0" prefWidth="150.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="9th grade" />
+                     <String fx:value="10th grade" />
+                     <String fx:value="11th grade" />
+                     <String fx:value="12th grade" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <VBox layoutX="58.0" layoutY="10.0" prefHeight="101.0" prefWidth="16.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="17.0" layoutY="142.0" prefHeight="101.0" prefWidth="839.0">
+         <children>
+            <VBox prefHeight="101.0" prefWidth="12.0" />
+            <Label text="Date">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="101.0" prefWidth="16.0" />
+            <VBox prefHeight="101.0" prefWidth="240.0">
+               <children>
+                  <DatePicker fx:id="datePicker" prefHeight="39.0" prefWidth="204.0" />
+               </children>
+            </VBox>
+            <Label text="Hours">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin>
+            </Label>
+            <VBox prefHeight="101.0" prefWidth="15.0" />
+            <TextField fx:id="hoursTextField" prefHeight="39.0" prefWidth="178.0" promptText="Completed Hours" />
+            <VBox prefHeight="101.0" prefWidth="24.0" />
+            <Label text="Category">
+               <HBox.margin>
+                  <Insets top="8.0" />
+               </HBox.margin></Label>
+            <VBox prefHeight="101.0" prefWidth="14.0" />
+            <ChoiceBox fx:id="serviceAwardChoiceBox" prefHeight="39.0" prefWidth="150.0">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="CSA Community" />
+                     <String fx:value="CSA Service" />
+                     <String fx:value="CSA Achievement" />
+                  </FXCollections>
+               </items>
+            </ChoiceBox>
+            <VBox layoutX="58.0" layoutY="10.0" prefHeight="101.0" prefWidth="16.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="243.0" prefHeight="65.0" prefWidth="839.0" spacing="5.0">
+         <children>
+            <Button fx:id="buttonAddStudent" mnemonicParsing="false" onAction="#newStudentButtonPushed" text="Add Student" />
+            <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#searchStudentButtonPushed" text="Search" />
+            <Button fx:id="buttonReset" mnemonicParsing="false" onAction="#resetButtonPushed" text="Reset" />
+            <Button fx:id="buttonAddHours" mnemonicParsing="false" onAction="#addHoursButtonPushed" text="Add Hours" />
+            <Button fx:id="printButton" mnemonicParsing="false" onAction="#generateReportButtonPushed" text="Generate Report" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
