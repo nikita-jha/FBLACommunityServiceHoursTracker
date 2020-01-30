@@ -35,7 +35,7 @@ public class Controller {
         // Handle Button event.
         myButton.setOnAction((event) -> {
             System.out.println("Button pressed");
-            if (! (usernameTxt.getText().equals("") && (passwordTxt.getText().equals("")))) {
+            if (! (usernameTxt.getText().equals("Northview") && (passwordTxt.getText().equals("titans")))) {
                 resultLabel.setText("Invalid password \n");
             } else {
                 loginAction();

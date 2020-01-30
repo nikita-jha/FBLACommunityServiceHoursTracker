@@ -1,6 +1,8 @@
 package sample;
 
+import java.io.File;
 import java.io.FileWriter;
+import java.net.URLDecoder;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -13,10 +15,18 @@ public class DBConnection {
 
     public DBConnection() {
         try {
+            Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
+            String path = Main.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            String decodedPath = (URLDecoder.decode(path, "UTF-8")).replaceAll("FBLACommunityServiceHoursTracker.jar", "FBLA_Community_Service_Hours_Tracker_DB.mdb");
+            System.out.println("The decoded without console prompt path : " + decodedPath);
+            //Uncomment the below line to generate executable jar
+            //conn = DriverManager.getConnection("jdbc:ucanaccess:/" + decodedPath);
+
+            //Uncomment the below line to run it from intellij
             conn = DriverManager.getConnection("jdbc:ucanaccess://C:\\Users\\nikit\\FBLA_Community_Service_Hours_Tracker_DB.mdb");
             stmt = conn.createStatement();
             conn.setAutoCommit(true);
-        } catch(SQLException sqle) {
+        } catch(Exception sqle) {
             sqle.printStackTrace();
         }
 
@@ -62,7 +72,7 @@ public class DBConnection {
                         rest.getString(5),
                         rest.getString(3),
                         rest.getString(6),
-                        rest.getString(4));
+                        rest.getString(4).substring(0,11));
                 stdArray.add(std);
             }
 

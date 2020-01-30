@@ -167,6 +167,8 @@
                 hoursTextField.setText(null);
                 serviceAwardChoiceBox.setValue(null);
                 buttonReset.setDisable(true);
+                tableView.setItems(getStudents(null));
+
             }
 
 
@@ -244,6 +246,7 @@
             //Get all the items from the table as a list, then add the new Student to the list
             tableView.setItems(getStudents(student));
             buttonReset.setDisable(false);
+
 
         }
 
