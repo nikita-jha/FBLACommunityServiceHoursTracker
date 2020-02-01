@@ -6,13 +6,17 @@ Name: Nikita Jha
 Language: Java
 JavaFX Dependencies: Java 8, JavaFX 12, and MSAccess (as Database), Excel (for CSV)
 
+Application Username: Northview
+Application Passwork: titans
+
 Build and Run instructions: 
 
-1). Download project from github URL (green CLONE/DOWNLOAD button on top right side of page)
+    1). Download project from github URL (green CLONE/DOWNLOAD button on top right side of page)
 
-2). You can either run by downloading the executable or building and running from Intellij. Directions for both are listed below but you only have to do one in order to run the app. 
+    2). You can either run by downloading the executable or building and running from Intellij. Directions for both are listed below but you only have to do one in order to run the app. 
 
 --Executable Download Instructions: 
+
     1) Navigate to Executable directory located in FBLACommunityServiceHoursTracker folder.
     
     2) Make sure you have "write" permission on the Executable folder.
