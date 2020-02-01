@@ -11,7 +11,7 @@ Application Username: Northview
 
 Application Password: titans
 
-Build and Run instructions:
+Build and Run Instructions:
 
 *You can either run by downloading the executable or building and running from Intellij. Directions for both are listed below but you only have to do one in order to run the app. 
 
@@ -51,15 +51,14 @@ Build and Run instructions:
 Application Instruction:
 
 1). Type username and password to enter program.
+        Application Username: Northview
+        Application Password: titans
 
 2). The new screen will have student entry fields and a grid where you can view all the students. Most of the information on the screen is intuitive. The grid has multiple columns to store all of a student's information including the student's name, grade, and number.
 
 3). You can perform the following operations:
 
     a). Add Student - Enter all of a student's information into the entry fields and press "Add Student" to populate the database and           grid with the student.
-    
-              Application Username: Northview
-              Application Password: titans
     
     b). Edit Student - You  can edit a student's information by double clicking the name, grade, hours, or service award and then               pressing enter. You cannot edit the student's number because this is the primary ID. 
     
