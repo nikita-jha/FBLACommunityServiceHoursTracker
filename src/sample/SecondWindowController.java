@@ -39,35 +39,46 @@
         public static HostServices hostServices;
 
 
-
-        //This method is for connecting the table with the insert student button
+        /**
+         * This method is for setting the name column to be editable
+         * @param edditedCell
+         */
         public void changeFirstNameCellEvent(TableColumn.CellEditEvent edditedCell) {
             Student studentSelected = tableView.getSelectionModel().getSelectedItem();
             studentSelected.setFirstName(edditedCell.getNewValue().toString());
             mydbconnection.updateStudent(studentSelected);
         }
 
-
+        /**
+         * This method is for setting the hours cell to be editable
+         * @param edditedCell
+         */
         public void changeHoursCellEvent(TableColumn.CellEditEvent edditedCell) {
             Student studentSelected = tableView.getSelectionModel().getSelectedItem();
             studentSelected.setHours(edditedCell.getNewValue().toString());
             mydbconnection.updateHours(studentSelected);
         }
 
+        /**
+         * This method is for setting the grade cell to be editable
+         * @param edditedCell
+         */
         public void changeGradeCellEvent(TableColumn.CellEditEvent edditedCell) {
             Student studentSelected = tableView.getSelectionModel().getSelectedItem();
             studentSelected.setGrade(edditedCell.getNewValue().toString());
             mydbconnection.updateHours(studentSelected);
         }
+
+        /**
+         * This method is for setting the service award cell to be editable
+         * @param edditedCell
+         */
         public void changeServiceAwardCellEvent(TableColumn.CellEditEvent edditedCell) {
             Student studentSelected = tableView.getSelectionModel().getSelectedItem();
             studentSelected.setServiceAward(edditedCell.getNewValue().toString());
             mydbconnection.updateStudent(studentSelected);
 
         }
-
-
-
 
         @FXML private TextField studentNumberTextField;
         @FXML private TextField firstNameTextField;
@@ -86,7 +97,11 @@
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy", Locale.US);
 
 
-
+        /**
+         * This method is for initializing every single column in the data table and settings its name
+         * @param url
+         * @param rb
+         */
         @Override
         public void initialize(URL url, ResourceBundle rb) {
             buttonAddHours.setDisable(true);
@@ -122,12 +137,11 @@
 
         }
 
-
+        /**
+         * This method is for enabling or disabling certain buttons and checking the table's selected item
+         */
         public void onEdit() {
-            // check the table's selected item and get selected item
             if (tableView.getSelectionModel().getSelectedItem() != null) {
-                //disable addStudent Search and Delete
-
 
                 studentNumberTextField.setEditable(false);
                 firstNameTextField.setEditable(false);
@@ -141,25 +155,11 @@
                 serviceAwardChoiceBox.setValue(selectedStudent.getServiceAward());
             }
         }
-        //This method will remove the selected row(s) from the table
 
-        public void deleteButtonPushed() {
-                //delete student code is added here
-                ObservableList<Student> selectedRows, allStudents;
-                allStudents = tableView.getItems();
-
-                //this gives use the rows that we selected
-                selectedRows = tableView.getSelectionModel().getSelectedItems();
-
-                //Loop over the selected rows and remove the Student object from the table
-                for (Student student : selectedRows) {
-                    allStudents.remove(student);
-                    mydbconnection.deleteQuery(student);
-                }
-
-            }
-
-            public void resetButtonPushed(){
+        /**
+         * This method creates the reset button and sets all the fields to be null after pressing the button
+         */
+        public void resetButtonPushed(){
                 studentNumberTextField.setText(null);
                 firstNameTextField.setText(null);
                 gradesChoiceBox.setValue(null);
@@ -168,10 +168,11 @@
                 serviceAwardChoiceBox.setValue(null);
                 buttonReset.setDisable(true);
                 tableView.setItems(getStudents(null));
-
             }
 
-
+        /**
+         * This method adds hours to a student's profile
+         */
         public void addHoursButtonPushed() {
             System.out.println((datePicker.getValue()).format(formatter));
             String formattedValue = (datePicker.getValue()).format(formatter);
@@ -197,9 +198,9 @@
             tableView.setItems(getStudents(null));
         }
 
-
-
-        //This method will create a new Student object and add it to the table
+        /**
+         * This method will create a new Student object and add it to the table
+         */
         public void newStudentButtonPushed() {
             System.out.println((datePicker.getValue()).format(formatter));
             String formattedValue = (datePicker.getValue()).format(formatter);
@@ -231,7 +232,9 @@
 
         }
 
-        //This method will search Student object and add it to the table
+        /**
+         * This method will search Student object and add it to the table
+         */
         public void searchStudentButtonPushed() {
 
             Student student = null;
@@ -246,11 +249,13 @@
             //Get all the items from the table as a list, then add the new Student to the list
             tableView.setItems(getStudents(student));
             buttonReset.setDisable(false);
-
-
         }
 
-
+        /**
+         * Getter for all the students currently added to the Array List
+         * @param passedStudent
+         * @return
+         */
 
         public ObservableList<Student> getStudents(Student passedStudent)  {
             ObservableList<Student> student = FXCollections.observableArrayList();
@@ -261,6 +266,9 @@
             return student;
         }
 
+        /**
+         * This method creates the generate report button and connects it to computer's documents file
+         */
         public void generateReportButtonPushed() {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select PDF files");

@@ -29,6 +29,9 @@ public class Controller {
     public Controller() {
     }
 
+    /**
+     * This method initializes the login page and sets the username and password
+     */
     @FXML
     private void initialize() {
         resultLabel.setText("");
@@ -43,6 +46,10 @@ public class Controller {
 
         });
     }
+
+    /**
+     * This method creates the second page after pressing the login button
+     */
     private void loginAction() {
         resultLabel.setText("");
 
@@ -60,28 +67,6 @@ public class Controller {
         }
 
     }
-
-    @FXML
- private void printScreen() {
-        // Handle Print Button event.
-        printButton.setOnAction((event) -> {
-            System.out.println("Print Button Pushed");
-            try{
-                Stage stageP = (Stage) printButton.getScene().getWindow();
-                stageP.close();
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/sample/printScreen.fxml"));
-                Parent root1 = (Parent) fxmlLoader.load();
-                Stage stage = new Stage();
-                stage.setScene(new Scene(root1));
-                stage.show();
-            }
-            catch (Exception e) {
-                System.err.println(e.getMessage());
-            }
-        });
-
-
-        }
 
 
 }

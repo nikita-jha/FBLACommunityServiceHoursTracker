@@ -12,6 +12,11 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    /**
+     * This method creates the primary screen for the login page.
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -19,11 +24,12 @@ public class Main extends Application {
         primaryStage.setTitle("Community Service Hours Tracker");
         primaryStage.setScene(new Scene(root, 850, 500));
         primaryStage.show();
-
-
-
-
     }
+
+    /**
+     * This is a test method used for testing individual features. This is not applicable for application.
+     * @param args
+     */
     public static void main(String[] args) {
         DBConnection myConnection = new DBConnection();
         myConnection.readQuery(null);

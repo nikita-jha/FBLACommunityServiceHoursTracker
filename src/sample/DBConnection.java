@@ -13,6 +13,9 @@ public class DBConnection {
     private Connection conn;
     private Statement stmt;
 
+    /**
+     * This method initializes DataBase Connection parameters
+     */
     public DBConnection() {
         try {
             Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
@@ -32,6 +35,11 @@ public class DBConnection {
 
     }
 
+    /**
+     * This method creates the read query that reads directly from the table
+     * @param student
+     * @return
+     */
     public ArrayList<Student> readQuery(Student student) {
 
         ResultSet rest;
@@ -83,6 +91,10 @@ public class DBConnection {
         return stdArray;
     }
 
+    /**
+     * This method creates the insert student query that allows the user to add a student to the database
+     * @param student
+     */
     public void insertStudent(Student student) {
         try
         {
@@ -100,6 +112,11 @@ public class DBConnection {
         }
 
     }
+
+    /**
+     * This method creates the insert hours query that allows the user to add hours for a specific student
+     * @param student
+     */
     public void insertHours(Student student) {
         try
         {
@@ -120,26 +137,11 @@ public class DBConnection {
         }
 
     }
-    public void deleteQuery(Student student) {
-        try
-        {
-            String query = "DELETE * FROM Hours_Tracker WHERE Number = '"+student.getStudentNumber()+"' and Grade= '"+
-                    student.getGrade()+"' and Hours= '"+student.getHours()+"' and HoursDate= '"+student.getHoursDate()+"'";
-            System.out.println("The delete query : " + query);
-            stmt = conn.createStatement();
-            stmt.executeUpdate(query);
 
-            System.out.println("successful");
-        }
-        catch(Exception e)
-        {
-            System.out.println("Not connected"+e);
-        }
-
-    }
-
-
-
+    /**
+     * This method creates the update student query that allows the user to change a student's information after adding
+     * @param student
+     */
     public void updateStudent(Student student) {
         try
         {
@@ -158,6 +160,10 @@ public class DBConnection {
 
     }
 
+    /**
+     * This method creates the update hours query that allows a user to update a student's hours
+     * @param student
+     */
     public void updateHours(Student student) {
         try
         {
@@ -177,18 +183,15 @@ public class DBConnection {
 
     }
 
-    public void closeConnection() {
-        try {
-            stmt.close();
-            conn.close();
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+    /**
+     * This method creates the CSV creation query that allows the user to generate a CSV report of all the hours
+     * @param student
+     * @param filename
+     * @throws SQLException
+     * @throws Exception
+     */
     public void createCSVFile(Student student,
                               String filename) throws SQLException, Exception
-// Create a statement
     {
         ResultSet rest;
         ArrayList<Student> stdArray = new ArrayList<Student>();
