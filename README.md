@@ -74,4 +74,12 @@ Application Instruction:
     e). Export Monthly Report - Any information that is visible in the Grid can also be exported as a monthly report. You can export a   
         monthly report by pressing "Generate Report". Choose the location where you want to save the document in your folder. MAKE SURE 
         TO ADD ".csv" TO THE END OF THE FILE WHEN SAVING. 
+  
+  Copyright Information: 
+
+All images used are from these source(s):
+
+     -Google images using the "Labeled for Reuse" Filter
+
+The application is in compliance with all copyright laws, both federal and state. 
 
