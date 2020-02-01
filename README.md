@@ -4,7 +4,8 @@ School Name: Northview High School
 Name: Nikita Jha
 
 Language: Java
-JavaFX Dependencies: Java 8, JavaFX 12, and MSAccess (as Database), Excel (for CSV)
+
+JavaFX Dependencies: Java 8, JavaFX 12, MSAccess (as Database), and Excel (for CSV)
 
 Application Username: Northview
 
