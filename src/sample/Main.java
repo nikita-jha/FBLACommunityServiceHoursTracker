@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     /**
-     * This method creates the primary screen for the login page.
+     * This method creates the primary screen for FBLA Community login page.
      * @param primaryStage
      * @throws Exception
      */
