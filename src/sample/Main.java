@@ -27,7 +27,7 @@ public class Main extends Application {
     }
 
     /**
-     * This is a test method used for testing individual features. This is not applicable for application.
+     * This is a test method used for testing individual features. This is not applicable for the application.
      * @param args
      */
     public static void main(String[] args) {
