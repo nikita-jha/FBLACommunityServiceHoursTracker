@@ -7,7 +7,8 @@ Language: Java
 JavaFX Dependencies: Java 8, JavaFX 12, and MSAccess (as Database), Excel (for CSV)
 
 Application Username: Northview
-Application Passwork: titans
+
+Application Password: titans
 
 Build and Run instructions: 
 
@@ -35,9 +36,9 @@ Build and Run instructions:
 
     2). Project is set up for IntelliJ IDE (.idea included). Open project in IntelliJ or Eclpise
 
-    3). Ensure dependecies from libraries are fully resolved. Open Module Settings and import the libraries to run JavaFX projects.
+    3). Ensure dependencies from libraries are fully resolved. Open Module Settings and import the libraries to run JavaFX projects.
 
-    4). The Application uses MSAccess DB. https://sourceforge.net/projects/ucanaccess/files/. You have to download UCanAccess                   distribution and add the following JAR files to the classpath (In Intellij add these libraries as external dependencies):               ucanaccess-4.0.4.jar hsqldb-2.3.1.jar jackcess-2.1.11.jar commons-lang-2.6.jar commons-logging-1.1.3.jar The MSAaccess DB file           (FBLAAdvisorContact1.accdb) is included in the project under Database. Go to DBConnection.java and correct the file name where           ths file is copied.)
+    4). The Application uses MSAccess DB. https://sourceforge.net/projects/ucanaccess/files/. You have to download UCanAccess                   distribution and add the following JAR files to the classpath (In Intellij add these libraries as external dependencies):               ucanaccess-4.0.4.jar hsqldb-2.3.1.jar jackcess-2.1.11.jar commons-lang-2.6.jar commons-logging-1.1.3.jar The MSAaccess DB file           (FBLAAdvisorContact1.accdb) is included in the project under Database. Go to DBConnection.java and correct the file name where           this file is copied.)
 
     5). Compile and build the project. Ensure no error remains.
 
@@ -50,14 +51,14 @@ Application Instruction:
 
 1). Type username and password to enter program.
 
-2). The new screen will have student entry fields and a grid where you can view all the students. Most of the information on the screen is intutive. The grid has multiple columns to store all of a student's information including the student's name, grade, and number.
+2). The new screen will have student entry fields and a grid where you can view all the students. Most of the information on the screen is intuitive. The grid has multiple columns to store all of a student's information including the student's name, grade, and number.
 
 3). You can perform the following operations:
 
     a). Add Student - Enter all of a student's information into the entry fields and press "Add Student" to populate the database and           grid with the student.
     
               Application Username: Northview
-              Application Passwork: titans
+              Application Password: titans
     
     b). Edit Student - You  can edit a student's information by double clicking the name, grade, hours, or service award and then               pressing enter. You cannot edit the student's number because this is the primary ID. 
     
