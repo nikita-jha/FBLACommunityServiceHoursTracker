@@ -22,7 +22,7 @@ Build and Run Instructions:
     2) Navigate to Executable directory located in FBLACommunityServiceHoursTracker folder.
         
     3) Make sure you have Java 13 installed. The executable will not run with any lower Java version. The link can be found at:                
-    https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
+        https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
     
     4) Java should be setup on System classpath to run with Java 12 (You can check the Java version by typing "java -version" on Windows        console/cmd).
     
