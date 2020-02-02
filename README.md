@@ -5,7 +5,7 @@ Name: Nikita Jha
 
 Language: Java
 
-JavaFX Dependencies: Java 8, JavaFX 12, MSAccess (as Database), and Excel (for CSV)
+JavaFX Dependencies: Java 12 & above, Javafx, MSAccess (as Database), and Excel (for CSV)
 
 Application Username: Northview
 
@@ -20,16 +20,14 @@ Build and Run Instructions:
     1) Download project from github URL (green CLONE/DOWNLOAD button on top right side of page)
     
     2) Navigate to Executable directory located in FBLACommunityServiceHoursTracker folder.
+        
+    3) Make sure you have Java 13 installed. The executable will not run with any lower Java version. The link can be found at:                https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html
     
-    3) Make sure you have "write" permission on the Executable folder.
+    4) Java should be setup on System classpath to run with Java 12 (You can check the Java version by typing "java -version" on Windows        console/cmd).
     
-    4) Make sure you have Java 12 installed. The executable was built with Java 12. It will not run with any lower Java version.
+    5) Double click on  Executable/FBLACommunityServiceHours.bat
     
-    5) Java should be setup on System classpath to run with Java 12 (You can check the Java version by typing "java -version" on Windows        console/cmd).
-    
-    6) Double click on  Executable/FBLACommunityServiceHours.bat
-    
-    7) The application will launch with a login screen.
+    6) The application will launch with a login screen.
     
 --Project Build/Run Instructions For Intellij:
 
