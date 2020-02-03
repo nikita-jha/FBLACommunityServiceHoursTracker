@@ -60,11 +60,15 @@ Application Instruction:
 
     a). Add Student - Enter all of a student's information into the entry fields and press "Add Student" to populate the database and           grid with the student.
     
-    b). Edit Student - You  can edit a student's information by double clicking the name, grade, hours, or service award cell on the             grid and then pressing enter. You cannot edit the student's number because this is the primary ID. 
+    b). Edit Student - You  can edit a student's information by double clicking the name, grade, hours, or service award cell on the
+        grid and then pressing enter. You cannot edit the student's number because this is the primary ID. 
     
-    c). Add Community Service Hours - You can add community service hours by first double clicking on the student's number. Next, enter         the number of hours to add along with the date these hour(s) were completed on into the entry fields. Next, press "Add Hours."           Lastly, press "Reset" to bring the screen back to the original.  
+    c). Add Community Service Hours - You can add community service hours by first double clicking on the student's number. Next, enter 
+        the number of hours to add along with the date these hour(s) were completed on into the entry fields. Next, press "Add Hours."           Lastly, press "Reset" to bring the screen back to the original.  
 
-    d). Search Student - You can search a student by entering the student ID & student name and then click search. This will allow you           to see all of the entries for that student. Lastly, press "Reset" to bring the screen back to the original. 
+    d). Search Student - You can search a student by entering the student ID & student name and then click search. This will allow you   
+        to see all of the entries for that student. Lastly, press "Reset" to bring the screen back to the original. 
 
-    e). Export Monthly Report - Any information that is visible in the Grid can also be exported as a monthly report. You can export a           monthly report by pressing "Generate Report". Choose the location where you want to save the document in your folder. MAKE SURE         TO ADD ".csv" TO THE END OF THE FILE WHEN SAVING. 
+    e). Export Monthly Report - Any information that is visible in the Grid can also be exported as a monthly report. You can export a   
+        monthly report by pressing "Generate Report". Choose the location where you want to save the document in your folder. MAKE SURE         TO ADD ".csv" TO THE END OF THE FILE WHEN SAVING. 
 
